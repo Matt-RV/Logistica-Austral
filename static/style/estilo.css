@@ -4,3 +4,22 @@ body {
     background-image: url('../img/fondoWeb.png.jpg');
 }
 
+.text-grande-formulario {
+    font-weight: bold;
+    color: black;
+    letter-spacing: 1px;
+}
+
+.btn-registrarse {
+  background-color: #4c7faf; /* Cambiar el color del boton */
+  color: #fff; /* Cambiar el color dentro del texto */
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.btn-registrarse:hover {
+  background-color: #4e4caf; /* cambia el color al pasar el mouse */
+}
