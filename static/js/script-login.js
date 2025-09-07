@@ -1,5 +1,3 @@
-
-
 // Para reiniciar el formulario (inputs)
 window.addEventListener('DOMContentLoaded', function() { // Cuando se haya cargado completamente.
   var form = document.querySelector('form'); // Busca el elemento form.
@@ -19,22 +17,25 @@ function loginUser() {
     // Validaciones
     if (inputCorreo == "" || inputContraseña == "") {
         alert("Por favor, rellene todos los campos.");
+        return; // Salir de la función si los campos están vacíos
     }
     
     // Obtener usuarios del LocalStorage registrados.
     const usuarios = JSON.parse(localStorage.getItem("usuarios")) || []; //o inicializar un array vacío
+    
     const encontrarUsuario = usuarios.find(
-        usuario => usuario.inputCorreo == inputCorreo && usuario.inputContraseña == inputContraseña
-        // Estrictamente igual (===) que sean iguales tanto en valor y en el tipo de dato.
+        usuario => usuario.inputCorreo === inputCorreo && usuario.inputContraseña === inputContraseña
+        // Usamos === para comparación estricta
+        // Busca el primer elemento del array que cumpla con el correo y contrasennia.
+        // que el correo y contrasennia del user sean iguales a los del input.
     )
 
     // Validar que el usuario exista y la contraseña sea correcta.
     if (!encontrarUsuario) {
         alert("Correo o contraseña incorrectos, verifique nuevamente.");
-
     } else {
-      alert("Inicio de sesión exitoso.");
+        alert("Inicio de sesión exitoso.");
+        // Se debe redirigir a explorar.html
+        window.location.href = "explorar.html";
     }
-
-    
 }

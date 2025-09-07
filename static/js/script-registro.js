@@ -60,6 +60,7 @@ function registroUser() {
         usuarios.push({inputNombre, inputRut, inputCorreo, inputTelefono, inputContraseña}) // Agrega el usuario al Array.
         localStorage.setItem("usuarios", JSON.stringify(usuarios)) // guarda el array actualizado en localStorage.
         alert("Usuario registrado con éxito.")
+        window.location.href = "index.html"; // Redirige a index.html
     }
     
 }

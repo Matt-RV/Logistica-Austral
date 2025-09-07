@@ -23,3 +23,14 @@ body {
 .btn-registrarse:hover {
   background-color: #4e4caf; /* cambia el color al pasar el mouse */
 }
+
+.caja { 
+  background: rgba(255,255,255,0.85);
+  border-radius: 0; /* Esquinas rectas */ 
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15); /* Sombra alrededor */ 
+  padding: 3rem;
+  margin: 3rem 0;
+  width: 100%;
+  min-width: 320px; /* Ancho Minimo */ 
+  max-width: 400px; /* Ancho Maximo*/ 
+}
